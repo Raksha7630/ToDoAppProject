@@ -3,18 +3,22 @@ document.addEventListener("DOMContentLoaded", loadTasks);
 
 function addTask() {
     const input = document.getElementById("taskInput");
+    const dueDateInput = document.getElementById("dueDateInput");
+
     const taskText = input.value.trim();
+    const dueDate = dueDateInput.value;
 
     if (taskText === "") return;
 
-    createTaskElement(taskText, false);
+    createTaskElement(taskText, false, dueDate);
 
     saveTasks();
 
     input.value = "";
+    dueDateInput.value = "";
 }
 
-function createTaskElement(taskText, isCompleted) {
+function createTaskElement(taskText, isCompleted, dueDate = "") {
     const li = document.createElement("li");
 
     const span = document.createElement("span");
@@ -23,6 +27,19 @@ function createTaskElement(taskText, isCompleted) {
 
     if (isCompleted) {
         span.classList.add("completed");
+    }
+
+    // ✅ Due date display
+    const dateSpan = document.createElement("small");
+    dateSpan.className = "due-date";
+    if (dueDate) {
+        dateSpan.textContent = ` (Due: ${dueDate})`;
+    }
+
+    // Highlight overdue tasks (optional but good)
+    const today = new Date().toISOString().split("T")[0];
+    if (dueDate && dueDate < today) {
+        dateSpan.style.color = "red";
     }
 
     // Done button
@@ -51,6 +68,7 @@ function createTaskElement(taskText, isCompleted) {
     btnGroup.appendChild(deleteBtn);
 
     li.appendChild(span);
+    li.appendChild(dateSpan);
     li.appendChild(btnGroup);
 
     document.getElementById("taskList").appendChild(li);
@@ -62,7 +80,17 @@ function saveTasks() {
     document.querySelectorAll("#taskList li").forEach(li => {
         const text = li.querySelector(".task-text").textContent;
         const completed = li.querySelector(".task-text").classList.contains("completed");
-        tasks.push({ text, completed });
+
+        const dueDateElement = li.querySelector(".due-date");
+        let dueDate = "";
+
+        if (dueDateElement && dueDateElement.textContent) {
+            dueDate = dueDateElement.textContent
+                .replace(" (Due: ", "")
+                .replace(")", "");
+        }
+
+        tasks.push({ text, completed, dueDate });
     });
 
     localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -73,6 +101,6 @@ function loadTasks() {
     const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
     tasks.forEach(task => {
-        createTaskElement(task.text, task.completed);
+        createTaskElement(task.text, task.completed, task.dueDate);
     });
 }
