@@ -38,5 +38,8 @@ Chetana Ghimire
 Hom Bahadur Adhikari
 Puspa Tiwari
 
+## Version
+Current version: v1.1 (in development)
+
 ##  Conclusion
 This project helped us understand how to build a simple web application and manage it using DevOps tools like Azure DevOps.
