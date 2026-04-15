@@ -36,7 +36,10 @@ button {
     border: none;
     border-radius: 5px;
 }
-
+small.due-date {
+    margin-left: 10px;
+    color: gray;
+}
 li {
     list-style: none;
     margin-top: 10px;
