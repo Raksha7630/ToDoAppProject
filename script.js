@@ -1,6 +1,10 @@
-// Load tasks when page loads
-document.addEventListener("DOMContentLoaded", loadTasks);
+// Load on start
+document.addEventListener("DOMContentLoaded", () => {
+    loadTasks();
+    loadTheme();
+});
 
+// ===== ADD TASK =====
 function addTask() {
     const input = document.getElementById("taskInput");
     const dueDateInput = document.getElementById("dueDateInput");
@@ -18,9 +22,11 @@ function addTask() {
     dueDateInput.value = "";
 }
 
+// ===== CREATE TASK =====
 function createTaskElement(taskText, isCompleted, dueDate = "") {
     const li = document.createElement("li");
 
+    // Task text
     const span = document.createElement("span");
     span.textContent = taskText;
     span.className = "task-text";
@@ -29,6 +35,20 @@ function createTaskElement(taskText, isCompleted, dueDate = "") {
         span.classList.add("completed");
     }
 
+    // Due date
+    const dateSpan = document.createElement("span");
+    dateSpan.className = "due-date";
+    dateSpan.textContent = dueDate ? ` (Due: ${dueDate})` : "";
+
+    // Done button (FIXED)
+    const doneBtn = document.createElement("button");
+    doneBtn.textContent = "✔";
+    doneBtn.className = "done-btn";
+
+    doneBtn.onclick = function () {
+        span.classList.toggle("completed");
+        saveTasks();
+    };
 
     // Delete button
     const deleteBtn = document.createElement("button");
@@ -40,6 +60,7 @@ function createTaskElement(taskText, isCompleted, dueDate = "") {
         saveTasks();
     };
 
+    // Button group
     const btnGroup = document.createElement("div");
     btnGroup.className = "btn-group";
     btnGroup.appendChild(doneBtn);
@@ -52,21 +73,16 @@ function createTaskElement(taskText, isCompleted, dueDate = "") {
     document.getElementById("taskList").appendChild(li);
 }
 
-// Save tasks to localStorage
+// ===== SAVE TASKS =====
 function saveTasks() {
     const tasks = [];
+
     document.querySelectorAll("#taskList li").forEach(li => {
         const text = li.querySelector(".task-text").textContent;
         const completed = li.querySelector(".task-text").classList.contains("completed");
 
         const dueDateElement = li.querySelector(".due-date");
-        let dueDate = "";
-
-        if (dueDateElement && dueDateElement.textContent) {
-            dueDate = dueDateElement.textContent
-                .replace(" (Due: ", "")
-                .replace(")", "");
-        }
+        let dueDate = dueDateElement ? dueDateElement.textContent.replace(" (Due: ", "").replace(")", "") : "";
 
         tasks.push({ text, completed, dueDate });
     });
@@ -74,7 +90,7 @@ function saveTasks() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
-// Load tasks from localStorage
+// ===== LOAD TASKS =====
 function loadTasks() {
     const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
@@ -84,3 +100,26 @@ function loadTasks() {
 }
 
 
+  // THEME SYSTEM (NEW)
+
+const themeSelect = document.getElementById("themeSelect");
+
+themeSelect.addEventListener("change", () => {
+    applyTheme(themeSelect.value);
+});
+
+function applyTheme(theme) {
+    document.body.className = ""; // reset
+
+    if (theme !== "light") {
+        document.body.classList.add(`theme-${theme}`);
+    }
+
+    localStorage.setItem("theme", theme);
+}
+
+function loadTheme() {
+    const savedTheme = localStorage.getItem("theme") || "light";
+    themeSelect.value = savedTheme;
+    applyTheme(savedTheme);
+}
