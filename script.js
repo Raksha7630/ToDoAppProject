@@ -28,6 +28,17 @@ function addTask() {
 // ===== CREATE TASK =====
 function createTaskElement(taskText, isCompleted, dueDate = "") {
     const li = document.createElement("li");
+    const editBtn = document.createElement("button");
+editBtn.textContent = "Edit";
+editBtn.className = "edit-btn";
+
+editBtn.onclick = function () {
+    const newText = prompt("Edit task:", span.textContent);
+    if (newText) {
+        span.textContent = newText;
+        saveTasks();
+    }
+};
 
     // Task text
     const span = document.createElement("span");
