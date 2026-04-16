@@ -48,10 +48,11 @@ function createTaskElement(taskText, isCompleted, dueDate = "") {
     doneBtn.textContent = "✔";
     doneBtn.className = "done-btn";
 
-    doneBtn.onclick = function () {
-        span.classList.toggle("completed");
-        saveTasks();
-    };
+  doneBtn.onclick = function () {
+    span.classList.toggle("completed");
+    li.classList.toggle("completed-task");
+    saveTasks();
+};
 
     // Delete button
     const deleteBtn = document.createElement("button");
