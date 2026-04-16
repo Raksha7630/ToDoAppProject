@@ -7,53 +7,61 @@
 </head>
 <body>
 
-<!-- FONT SETTINGS PANEL -->
-<div class="font-panel">
-    <h3>Font Settings</h3>
+    <!-- FONT SETTINGS PANEL -->
+    <div class="font-panel">
+        <h3>Font Settings</h3>
 
-    <label>Font Family</label>
-    <select id="fontFamily">
-        <option value="Arial">Arial</option>
-        <option value="Georgia">Georgia</option>
-        <option value="Verdana">Verdana</option>
-        <option value="Courier New">Courier New</option>
-        <option value="Tahoma">Tahoma</option>
-    </select>
+        <label>Font Family</label>
+        <select id="fontFamily">
+            <option value="Arial">Arial</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Tahoma">Tahoma</option>
+        </select>
 
-    <label>Font Size</label>
-    <input type="range" id="fontSize" min="12" max="28" value="16">
+        <label>Font Size</label>
+        <input type="range" id="fontSize" min="12" max="28" value="16">
 
-    <button id="resetFont">Reset</button>
-</div>
-
-<!-- THEME PANEL (NEW) -->
-<div class="theme-panel">
-    <h3>Theme Settings</h3>
-
-    <label>Choose Theme</label>
-    <select id="themeSelect">
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-        <option value="ocean">Ocean</option>
-        <option value="sunset">Sunset</option>
-        <option value="forest">Forest</option>
-    </select>
-</div>
-
-<!-- MAIN APP -->
-<div class="container">
-    <h1>📝 Smart To-Do App</h1>
-
-    <div class="input-section">
-        <input type="text" id="taskInput" placeholder="Enter a task...">
-        <input type="date" id="dueDateInput">
+        <button id="resetFont">Reset</button>
     </div>
 
-    <button onclick="addTask()">Add</button>
+    <!-- THEME PANEL -->
+    <div class="theme-panel">
+        <h3>Theme Settings</h3>
 
-    <ul id="taskList"></ul>
-</div>
+        <label>Choose Theme</label>
+        <select id="themeSelect">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="ocean">Ocean</option>
+            <option value="sunset">Sunset</option>
+            <option value="forest">Forest</option>
+        </select>
+    </div>
 
-<script src="script.js"></script>
+    <!-- MAIN APP -->
+    <div class="container">
+        <h1>📝 Smart To-Do App</h1>
+
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="Enter a task...">
+            <input type="date" id="dueDateInput">
+
+            <!-- ✅ CATEGORY DROPDOWN ADDED -->
+            <select id="categoryInput">
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Study">Study</option>
+            </select>
+        </div>
+
+        <button onclick="addTask()">Add</button>
+
+        <ul id="taskList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
