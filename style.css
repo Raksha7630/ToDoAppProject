@@ -1,4 +1,3 @@
-
 :root {
     --bg: #f4f6f8;
     --card: white;
@@ -7,7 +6,7 @@
     --task-bg: #eee;
 }
 
-/*  DARK */
+/* DARK */
 body.theme-dark {
     --bg: #121212;
     --card: #1e1e1e;
@@ -16,7 +15,7 @@ body.theme-dark {
     --task-bg: #2a2a2a;
 }
 
-/*  OCEAN */
+/* OCEAN */
 body.theme-ocean {
     --bg: #e6f7ff;
     --card: #ffffff;
@@ -25,7 +24,7 @@ body.theme-ocean {
     --task-bg: #d9f2ff;
 }
 
-/*  SUNSET */
+/* SUNSET */
 body.theme-sunset {
     --bg: #fff4e6;
     --card: #ffffff;
@@ -34,7 +33,7 @@ body.theme-sunset {
     --task-bg: #ffe0cc;
 }
 
-/*  FOREST */
+/* FOREST */
 body.theme-forest {
     --bg: #e8f5e9;
     --card: #ffffff;
@@ -42,8 +41,6 @@ body.theme-forest {
     --primary: #2e7d32;
     --task-bg: #c8e6c9;
 }
-
-
 
 body {
     font-family: Arial, sans-serif;
@@ -73,7 +70,7 @@ h1 {
     gap: 10px;
 }
 
-input {
+input, select {
     flex: 1;
     padding: 10px;
 }
@@ -136,4 +133,27 @@ li {
 small.due-date {
     margin-left: 10px;
     color: gray;
+}
+
+/* ✅ RESPONSIVE DESIGN (ADDED) */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .input-section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input, select, button {
+        width: 100%;
+    }
+
+    .btn-group {
+        display: flex;
+        justify-content: space-between;
+    }
 }
