@@ -13,10 +13,13 @@ This project is a simple To-Do List web application developed to help users mana
 - Mark tasks as completed
 - Delete tasks
 - Simple and user-friendly interface
+- feature/hom-notifications
+- Task notification when adding a task 🔔
 - feature/hom-category-dropdown
 - Category selection for tasks ✅
 - Responsive design for mobile devices 📱
  
+
 
 ##  Technologies Used
 - HTML
