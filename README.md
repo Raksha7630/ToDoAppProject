@@ -13,6 +13,7 @@ This project is a simple To-Do List web application developed to help users mana
 - Mark tasks as completed
 - Delete tasks
 - Simple and user-friendly interface
+-  Category selection for tasks ✅
 
 ##  Technologies Used
 - HTML
