@@ -18,6 +18,9 @@ function addTask() {
 
     saveTasks();
 
+    // ✅ NOTIFICATION ADDED
+    alert("Task added successfully!");
+
     input.value = "";
     dueDateInput.value = "";
 }
@@ -40,7 +43,7 @@ function createTaskElement(taskText, isCompleted, dueDate = "") {
     dateSpan.className = "due-date";
     dateSpan.textContent = dueDate ? ` (Due: ${dueDate})` : "";
 
-    // Done button (FIXED)
+    // Done button
     const doneBtn = document.createElement("button");
     doneBtn.textContent = "✔";
     doneBtn.className = "done-btn";
@@ -82,7 +85,9 @@ function saveTasks() {
         const completed = li.querySelector(".task-text").classList.contains("completed");
 
         const dueDateElement = li.querySelector(".due-date");
-        let dueDate = dueDateElement ? dueDateElement.textContent.replace(" (Due: ", "").replace(")", "") : "";
+        let dueDate = dueDateElement
+            ? dueDateElement.textContent.replace(" (Due: ", "").replace(")", "")
+            : "";
 
         tasks.push({ text, completed, dueDate });
     });
@@ -99,9 +104,7 @@ function loadTasks() {
     });
 }
 
-
-  // THEME SYSTEM (NEW)
-
+// ===== THEME SYSTEM =====
 const themeSelect = document.getElementById("themeSelect");
 
 themeSelect.addEventListener("change", () => {
