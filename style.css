@@ -26,12 +26,14 @@ body.theme-ocean {
 
 /* SUNSET */
 body.theme-sunset {
-    --bg: #fff4e6;
+    --bg: #d3b186;
     --card: #ffffff;
-    --text: #4a2c2a;
+    --text: #db8f8a;
     --primary: #ff6b6b;
     --task-bg: #ffe0cc;
 }
+
+ readme-file
 
 /* FOREST */
 body.theme-forest {
@@ -41,6 +43,7 @@ body.theme-forest {
     --primary: #2e7d32;
     --task-bg: #c8e6c9;
 }
+
 
 body {
     font-family: Arial, sans-serif;
