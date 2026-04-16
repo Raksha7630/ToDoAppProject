@@ -29,7 +29,7 @@ body.theme-ocean {
 body.theme-sunset {
     --bg: #fff4e6;
     --card: #ffffff;
-    --text: #4a2c2a;
+    --text: #db8f8a;
     --primary: #ff6b6b;
     --task-bg: #ffe0cc;
 }
@@ -39,7 +39,7 @@ body.theme-forest {
     --bg: #e8f5e9;
     --card: #ffffff;
     --text: #1b3b1b;
-    --primary: #2e7d32;
+    --primary: #8bc78e;
     --task-bg: #c8e6c9;
 }
 
