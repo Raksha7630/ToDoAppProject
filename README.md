@@ -13,6 +13,9 @@ This project is a simple To-Do List web application developed to help users mana
 - Mark tasks as completed
 - Delete tasks
 - Simple and user-friendly interface
+- Add README file
+- Add font feature
+- Add color theme feature
 
 ##  Technologies Used
 - HTML
