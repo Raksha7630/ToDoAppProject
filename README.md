@@ -16,6 +16,12 @@ This project is a simple To-Do List web application developed to help users mana
 - Add README file
 - Add font feature
 - Add color theme feature
+- feature/hom-notifications
+- Task notification when adding a task 🔔
+- feature/hom-category-dropdown
+- Category selection for tasks ✅
+- Responsive design for mobile devices 📱
+ 
 
 ##  Technologies Used
 - HTML
@@ -40,6 +46,9 @@ Rakshya Shrestha
 Chetana Ghimire
 Hom Bahadur Adhikari
 Puspa Tiwari
+
+## Version
+Current version: v1.1 (in development)
 
 ##  Conclusion
 This project helped us understand how to build a simple web application and manage it using DevOps tools like Azure DevOps.
