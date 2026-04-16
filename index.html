@@ -7,14 +7,35 @@
 </head>
 <body>
 
+<!-- FONT SETTINGS PANEL -->
+<div class="font-panel">
+    <h3>Font Settings</h3>
+
+    <label>Font Family</label>
+    <select id="fontFamily">
+        <option value="Arial">Arial</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Tahoma">Tahoma</option>
+    </select>
+
+    <label>Font Size</label>
+    <input type="range" id="fontSize" min="12" max="28" value="16">
+
+    <button id="resetFont">Reset</button>
+</div>
+
+<!-- MAIN APP -->
 <div class="container">
     <h1>📝 Smart To-Do App</h1>
 
     <div class="input-section">
         <input type="text" id="taskInput" placeholder="Enter a task...">
         <input type="date" id="dueDateInput">
-        <button onclick="addTask()">Add</button>
     </div>
+
+    <button onclick="addTask()">Add</button>
 
     <ul id="taskList"></ul>
 </div>

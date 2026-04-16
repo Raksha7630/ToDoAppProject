@@ -104,3 +104,56 @@ function loadTasks() {
         createTaskElement(task.text, task.completed, task.dueDate);
     });
 }
+
+
+// FONT SYSTEM FEATURE
+
+const fontFamily = document.getElementById("fontFamily");
+const fontSize = document.getElementById("fontSize");
+const resetFont = document.getElementById("resetFont");
+
+// Load saved font settings
+document.addEventListener("DOMContentLoaded", () => {
+    const savedFont = localStorage.getItem("fontFamily");
+    const savedSize = localStorage.getItem("fontSize");
+
+    if (savedFont) {
+        document.body.style.fontFamily = savedFont;
+        if (fontFamily) fontFamily.value = savedFont;
+    }
+
+    if (savedSize) {
+        document.body.style.fontSize = savedSize + "px";
+        if (fontSize) fontSize.value = savedSize;
+    }
+});
+
+// Change font family
+if (fontFamily) {
+    fontFamily.addEventListener("change", (e) => {
+        document.body.style.fontFamily = e.target.value;
+        localStorage.setItem("fontFamily", e.target.value);
+    });
+}
+
+// Change font size
+if (fontSize) {
+    fontSize.addEventListener("input", (e) => {
+        document.body.style.fontSize = e.target.value + "px";
+        localStorage.setItem("fontSize", e.target.value);
+    });
+}
+
+// Reset fonts
+if (resetFont) {
+    resetFont.addEventListener("click", () => {
+        document.body.style.fontFamily = "Arial";
+        document.body.style.fontSize = "16px";
+
+        localStorage.removeItem("fontFamily");
+        localStorage.removeItem("fontSize");
+
+        if (fontFamily) fontFamily.value = "Arial";
+        if (fontSize) fontSize.value = 16;
+    });
+}
