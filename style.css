@@ -138,7 +138,7 @@ small.due-date {
     color: gray;
 }
 
-/* ✅ RESPONSIVE DESIGN (ADDED) */
+/* RESPONSIVE DESIGN (ADDED) */
 @media (max-width: 600px) {
     .container {
         width: 90%;
