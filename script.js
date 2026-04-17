@@ -18,7 +18,7 @@ function addTask() {
 
     saveTasks();
 
-    // ✅ NOTIFICATION ADDED
+    // NOTIFICATION ADDED
     alert("Task added successfully!");
 
     input.value = "";
