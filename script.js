@@ -122,7 +122,7 @@ function applyTheme(theme) {
 }
 
 function loadTheme() {
-    const savedTheme = localStorage.getItem("theme") || "light";
+    const savedTheme = localStorage.getItem("theme") || "ocean";
     themeSelect.value = savedTheme;
     applyTheme(savedTheme);
 }
