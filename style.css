@@ -159,4 +159,9 @@ small.due-date {
         display: flex;
         justify-content: space-between;
     }
+    
+    button:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+}
 }
