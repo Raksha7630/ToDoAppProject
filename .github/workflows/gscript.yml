@@ -45,28 +45,15 @@ jobs:
           body: |
             The issue is now resolved.
 
-      - name: Congratulate on first pull request
+      - name: Congratulate on pull request
         if: github.event_name == 'pull_request' && github.event.action == 'opened'
         uses: actions/github-script@v6
         with:
           script: |
             const creator = context.payload.sender.login;
-            const repoOwner = context.repo.owner;
-            const repoName = context.repo.repo;
-
-            const pulls = await github.rest.pulls.list({
-              owner: repoOwner,
-              repo: repoName,
-              state: 'all'
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              body: `Congratulations @${creator} on your first pull request! 🎉 Welcome to the team!`
             });
-
-            const userPulls = pulls.data.filter(pr => pr.user.login === creator);
-
-            if (userPulls.length === 1) {
-              await github.rest.issues.createComment({
-                owner: repoOwner,
-                repo: repoName,
-                issue_number: context.payload.pull_request.number,
-                body: `Congratulations @${creator} on your first pull request! Welcome to the team!`
-              });
-            }
