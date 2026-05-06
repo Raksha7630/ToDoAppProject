@@ -18,7 +18,7 @@ function App() {
 
       <input
         type="text"
-        placeholder="Enter task"
+        placeholder="Enter a task here..."
         value={task}
         onChange={(e) => setTask(e.target.value)}
       />
@@ -32,7 +32,7 @@ function App() {
       </ul>
 
       <h2 style={{fontSize:'16px', color:'blue', textAlign:'center'}}>
-  Created by Hom, Rakshya, Chetana, Puspa and Team DevOps 2026 - Updated by Rakshya 
+  Created by Hom, Rakshya, Chetana, Puspa and Team DevOps 2026 - Updated by Chetana
 </h2>
     </div>
   );
