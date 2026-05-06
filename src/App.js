@@ -31,7 +31,7 @@ function App() {
         ))}
       </ul>
 
-      <h2>Created by Hom, Rakshya, Chetana, and Puspa</h2>
+      <h2>Created by Hom, Rakshya, Chetana, Puspa and Team DevOps</h2>
     </div>
   );
 }
