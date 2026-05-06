@@ -31,7 +31,11 @@ function App() {
         ))}
       </ul>
 
+<<<<<<< HEAD
       <h2 style={{fontSize:'12px', color:'blue', textAlign:'center'}}>
+=======
+      <h2 style={{fontSize:'16px', color:'red', textAlign:'center'}}>
+>>>>>>> b93641fca07684a633c96634e1eeeff196760b08
   Created by Hom, Rakshya, Chetana, Puspa and Team DevOps 2026 - Updated by Rakshya 
 </h2>
     </div>
