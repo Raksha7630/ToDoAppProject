@@ -31,7 +31,9 @@ function App() {
         ))}
       </ul>
 
-      <h2>Created by Hom, Rakshya, Chetana, Puspa and Team DevOps 2026 - Updated by Hom</h2>
+      <h2 style={{fontSize:'12px', color:'blue', textAlign:'center'}}>
+  Created by Hom, Rakshya, Chetana, Puspa and Team DevOps 2026 - Updated by Rakshya 
+</h2>
     </div>
   );
 }
