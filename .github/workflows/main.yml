@@ -5,11 +5,6 @@ on:
     branches:
       - main
 
-env:
-  ACR_NAME: todoapp2026
-  IMAGE_NAME: todoapp
-  WEBAPP_NAME: todoapp-web-2026
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -18,26 +13,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Login to Azure
-        uses: azure/login@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          node-version: '18'
 
-      - name: Login to Azure Container Registry
-        run: |
-          az acr login --name $ACR_NAME
+      - name: Install dependencies
+        run: npm install
 
-      - name: Build Docker image
-        run: |
-          docker build -t $ACR_NAME.azurecr.io/$IMAGE_NAME:${{ github.sha }} .
-
-      - name: Push Docker image
-        run: |
-          docker push $ACR_NAME.azurecr.io/$IMAGE_NAME:${{ github.sha }}
+      - name: Build React App
+        run: npm run build
 
       - name: Deploy to Azure Web App
-        run: |
-          az webapp config container set \
-            --name $WEBAPP_NAME \
-            --resource-group todoapp \
-            --docker-custom-image-name $ACR_NAME.azurecr.io/$IMAGE_NAME:${{ github.sha }}
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: todoapp-web-2026
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: build
