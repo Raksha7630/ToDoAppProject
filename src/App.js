@@ -18,7 +18,7 @@ function App() {
 
       <input
         type="text"
-        placeholder="Enter task"
+        placeholder="What needs to be done?"
         value={task}
         onChange={(e) => setTask(e.target.value)}
       />
@@ -31,8 +31,8 @@ function App() {
         ))}
       </ul>
 
-      <h2 style={{fontSize:'16px', color:'red', textAlign:'center'}}>
-  Created by Hom, Rakshya, Chetana, Puspa and Team DevOps 2026 - Final CI/CD Demo
+      <h2 style={{fontSize:'12px', color:'blue', textAlign:'center'}}>
+  Created by Hom, Rakshya, Chetana, Puspa and Team DevOps 2026 - Updated by Rakshya 
 </h2>
     </div>
   );
