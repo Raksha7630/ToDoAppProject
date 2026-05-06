@@ -7,6 +7,7 @@ This project is a simple To-Do List web application developed to help users mana
 - To understand basic web development using HTML, CSS, and JavaScript
 - To implement task management functionality
 - To apply DevOps practices using Azure DevOps
+- - Updated by Chetana
 
 ##  Features
 - Add new tasks
