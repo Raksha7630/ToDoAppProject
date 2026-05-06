@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+#  Smart To-Do List App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##  Introduction
+This project is a simple To-Do List web application developed to help users manage their daily tasks efficiently. The application allows users to add, complete, and delete tasks.
 
-## Available Scripts
+##  Objectives
+- To understand basic web development using HTML, CSS, and JavaScript
+- To implement task management functionality
+- To apply DevOps practices using Azure DevOps
 
-In the project directory, you can run:
+##  Features
+- Add new tasks
+- Mark tasks as completed
+- Delete tasks
+- Simple and user-friendly interface
+- Add README file
+- Add font feature
+- Add color theme feature
+- feature/hom-notifications
+- Task notification when adding a task 🔔
+- feature/hom-category-dropdown
+- Category selection for tasks ✅
+- Responsive design for mobile devices 📱
+ 
 
-### `npm start`
+##  Technologies Used
+- HTML
+- CSS
+- JavaScript
+- Azure DevOps
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+##  How to Run the Project
+1. Download or clone the repository
+2. Open the project folder
+3. Open `index.html` in any web browser
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##  DevOps Implementation
+This project is managed using Azure DevOps:
+- **Repos**: Source code management
+- **Boards**: Task and work tracking
+- **Github** : Commit changes and collaboration 
+- **Pipelines**: Continuous Integration setup
 
-### `npm test`
+##  Team Members
+Rakshya Shrestha
+Chetana Ghimire
+Hom Bahadur Adhikari
+Puspa Tiwari
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Version
+Current version: v1.1 (in development)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##  Conclusion
+This project helped us understand how to build a simple web application and manage it using DevOps tools like Azure DevOps.

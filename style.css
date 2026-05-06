@@ -1,0 +1,167 @@
+:root {
+    --bg: #f4f6f8;
+    --card: white;
+    --text: #000;
+    --primary: #0078D7;
+    --task-bg: #eee;
+}
+
+/* DARK */
+body.theme-dark {
+    --bg: #121212;
+    --card: #1e1e1e;
+    --text: #ffffff;
+    --primary: #bb86fc;
+    --task-bg: #2a2a2a;
+}
+
+/* OCEAN */
+body.theme-ocean {
+    --bg: #e6f7ff;
+    --card: #ffffff;
+    --text: #003b4d;
+    --primary: #0096c7;
+    --task-bg: #d9f2ff;
+}
+
+/* SUNSET */
+body.theme-sunset {
+    --bg: #d3b186;
+    --card: #ffffff;
+    --text: #db8f8a;
+    --primary: #ff6b6b;
+    --task-bg: #ffe0cc;
+}
+
+ readme-file
+
+/* FOREST */
+body.theme-forest {
+    --bg: #e8f5e9;
+    --card: #ffffff;
+    --text: #1b3b1b;
+    --primary: #2e7d32;
+    --task-bg: #c8e6c9;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    transition: 0.3s ease;
+}
+
+.container {
+    background: var(--card);
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+/* INPUT */
+.input-section {
+    display: flex;
+    gap: 10px;
+}
+
+input, select {
+    flex: 1;
+    padding: 10px;
+}
+
+/* BUTTON */
+button {
+    padding: 10px;
+    cursor: pointer;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* TASK LIST */
+li {
+    list-style: none;
+    margin-top: 10px;
+    padding: 10px;
+    background: var(--task-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+/* TASK TEXT */
+.task-text {
+    flex: 1;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* BUTTON GROUP */
+.btn-group {
+    display: flex;
+    gap: 5px;
+}
+
+.done-btn {
+    background: green;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* FONT SMALL FIX */
+small.due-date {
+    margin-left: 10px;
+    color: gray;
+}
+
+/* RESPONSIVE DESIGN (ADDED) */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .input-section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input, select, button {
+        width: 100%;
+    }
+
+    .btn-group {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    button:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+}
+}
