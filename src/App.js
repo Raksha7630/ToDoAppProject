@@ -32,7 +32,7 @@ function App() {
       </ul>
 
       <h2 style={{fontSize:'16px', color:'blue', textAlign:'center'}}>
-  Created by Hom, Rakshya, Chetana, Puspa and Team DevOps 2026 - Updated by Rakshya 
+  Made by Hom, Rakshya, Chetana, Puspa and Team DevOps 2026 - Updated by Rakshya 
 </h2>
     </div>
   );
